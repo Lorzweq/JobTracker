@@ -55,29 +55,6 @@ Notes:
 - If `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are not provided, authentication-related features will be unavailable but the UI will still run.
 - If `VITE_GROQ_API_KEY` is not provided or invalid, the CV analysis features will throw an error when used.
 
-## Deploying to GitHub Pages
-This project already includes a `deploy` script that uses the `gh-pages` package to publish the `dist` folder.
-
-1. Ensure your repository remote is set (you have a GitHub repo) and that `package.json` has the correct `name`/project info.
-2. Confirm the `base` option in `vite.config.js` matches your repository path. By default this project sets:
-
-```js
-// vite.config.js
-base: '/JobTracker/'
-```
-
-If your GitHub repo name is not `JobTracker`, update the `base` value to `'/your-repo-name/'`.
-
-3. Publish with:
-
-```bash
-npm run deploy
-```
-
-This runs `npm run build` then pushes the `dist` folder to the `gh-pages` branch. On GitHub, enable Pages for the `gh-pages` branch (or select the repository settings if GitHub auto-configured it).
-
-If you prefer GitHub Actions for CI/CD, you can set up a workflow that runs `npm run build` and then publishes the `dist` folder to GitHub Pages.
-
 ## Project structure (high level)
 
 - `src/` – React source files and components
@@ -93,8 +70,6 @@ If you prefer GitHub Actions for CI/CD, you can set up a workflow that runs `npm
 ## Contributing
 Contributions welcome — open issues or PRs with fixes and improvements.
 
-## License
-This project does not include a license by default. Add a `LICENSE` file if you want to choose a license.
 # React + Vite
 
 ## Setup
